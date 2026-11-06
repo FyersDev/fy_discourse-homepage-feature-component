@@ -183,14 +183,18 @@ export default class FeaturedHomepageTopics extends Component {
     }
 
     const sortOrder = settings.sort_by_created ? "created" : "activity";
-    const topicList = await this.store.findFiltered("topicList", {
-      filter: "latest",
-      params: {
-        tags: this.featuredTags,
-        order: sortOrder,
-      },
-    });
-    return topicList.topics;
+    try {
+      const topicList = await this.store.findFiltered("topicList", {
+        filter: "latest",
+        params: {
+          tags: this.featuredTags,
+          order: sortOrder,
+        },
+      });
+      return topicList.topics;
+    } catch {
+      return [];
+    }
   }
 
   @action

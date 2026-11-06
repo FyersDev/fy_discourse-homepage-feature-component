@@ -9,7 +9,8 @@ export default class HomepageFeaturedTopics extends Component {
     super.init(...arguments);
     this.set(
       "switchOutletToBelowDiscoveryCategories",
-      settings.featured_content_position === "below_discovery_categories"
+      settings.featured_content_position === "below_discovery_categories" &&
+        settings.show_on !== "all"
     );
   }
 
