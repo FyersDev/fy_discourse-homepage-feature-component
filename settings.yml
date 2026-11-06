@@ -1,0 +1,80 @@
+featured_tag:
+  type: list
+  list_type: tag
+  default: featured
+
+featured_topic_ids:
+  type: list
+  list_type: simple
+  default: ""
+
+number_of_topics:
+  default: 3
+  min: 1
+  max: 5
+
+max_number_of_topics:
+  default: 0
+  min: 0
+  max: 25
+
+pages_loop:
+  default: false
+
+hide_featured_tag:
+  default: true
+
+show_on:
+  default: homepage
+  type: enum
+  choices:
+    - top_menu
+    - homepage
+    - all
+
+show_for:
+  default: everyone
+  type: enum
+  choices:
+    - everyone
+    - logged_in
+    - logged_out
+
+make_collapsible:
+  default: false
+
+show_title:
+  default: false
+
+title_text:
+  default: "Featured Topics"
+
+sort_by_created:
+  default: true
+
+show_all_always:
+  default: false
+
+hide_closed_topics:
+  default: false
+
+always_link_to_first_post:
+  default: false
+
+mobile_slider:
+  default: true
+
+mobile_style:
+  default: horizontal_scroll
+  type: enum
+  choices:
+    - horizontal_scroll
+    - stacked_on_smaller_screens
+
+featured_content_position:
+  default: discovery_list_controls_above
+  type: enum
+  choices:
+    - above_main_container
+    - below_discovery_categories
+    - discovery_list_controls_above
